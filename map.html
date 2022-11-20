@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>Smartcity - Building Map</title>
+
+	<style>
+		html,
+		body,
+		#viewDiv {
+			padding: 0;
+			margin: 0;
+			height: 100%;
+			width: 100%;
+		}
+
+		#back {
+			position: absolute;
+			bottom: 20px;
+		}
+
+		#back i {
+			background-image: url(app/public/img/back.svg);
+			background-repeat: no-repeat;
+			display: inline-block;
+			width: 100px;
+			height: 25px;
+			padding-left: 25px;
+			padding-top: 2px;
+			margin: 10px;
+			cursor: pointer;
+			background-size: 20px;
+		}
+	</style>
+
+	<link rel="stylesheet" href="https://js.arcgis.com/4.16/esri/themes/light/main.css" />
+	<script src="https://js.arcgis.com/4.16/"></script>
+
+	<script>
+		require([
+			"esri/Map",
+			"esri/views/SceneView",
+			"esri/layers/GeoJSONLayer",
+			"esri/layers/SceneLayer", "esri/layers/GraphicsLayer", "esri/Graphic", "esri/request"
+		], function (Map, SceneView, GeoJSONLayer, SceneLayer,
+			GraphicsLayer, Graphic, esriRequest) {
+			var createGraphic = function (data) {
+				return new Graphic({
+					geometry: data,
+					symbol: data.symbol,
+					attributes: data,
+					popupTemplate: data.popupTemplate
+				});
+			};
+
+			const json_options = {
+				query: {
+					f: "json"
+				},
+				responseType: "json"
+			};
+			// request json
+			esriRequest('./data.json', json_options).then(function (response) {
+				var graphicsLayer = new GraphicsLayer();
+				console.log(response);
+				response.data.forEach(function (data) {
+					graphicsLayer.add(createGraphic(data));
+				});
+				map.add(graphicsLayer);
+
+			});
+			// geojson layer
+			const geojsonLayer = new GeoJSONLayer({
+				url: "./data.geojson"
+			});
+
+			geojsonLayer.renderer = {
+				type: "simple",
+				symbol: {
+					type: "polygon-3d",
+					symbolLayers: [
+						{
+							type: "extrude",
+							size: 0.5,
+							material: {
+								color: "#7eadf7"
+							}
+						}
+					]
+				}
+			};
+			const map = new Map({
+				basemap: "topo-vector",
+				ground: "world-elevation",
+				layers: [geojsonLayer] //end layers
+			});
+
+			const view = new SceneView({
+				container: "viewDiv",
+				map: map,
+				camera: {
+					position: [106.80322177258323, 10.869402044322747, 300],
+					heading: 0,
+					tilt: 75
+				}
+			});
+
+			view.popup.defaultPopupTemplateEnabled = true;
+		});
+
+	</script>
+</head>
+
+<body>
+	<div id="viewDiv"></div>
+</body>
+
+</html>
