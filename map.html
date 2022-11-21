@@ -91,20 +91,37 @@
 					]
 				}
 			};
+			const geojsonLayer2 = new GeoJSONLayer({
+				url: "./data2.geojson"
+			});
+			geojsonLayer2.renderer = {
+				type: "simple",
+				symbol: {
+					type: "polygon-3d",
+					symbolLayers: [
+						{
+							type: "extrude",
+							size: 10,
+							material: {
+								color: "#7eadf7"
+							}
+						}
+					]
+				}
+			};
 			const map = new Map({
 				basemap: "topo-vector",
 				ground: "world-elevation",
 				layers: [geojsonLayer] //end layers
 			});
+			map.layers.add(geojsonLayer2)
 
 			const view = new SceneView({
 				container: "viewDiv",
 				map: map,
 				camera: {
-					position: [
-                    106.80249,
-                    10.86985,
-					300],
+					position: [106.80249, 10.86985,
+300],
 					heading: 0,
 					tilt: 75
 				}
