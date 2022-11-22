@@ -109,6 +109,7 @@
 					]
 				}
 			};
+
 			const map = new Map({
 				basemap: "topo-vector",
 				ground: "world-elevation",
@@ -132,10 +133,29 @@
 					]
 				}
 			};
-			
+			const tang123 = new GeoJSONLayer({
+				url: "./tang123.geojson"
+			});
+			tang123.renderer = {
+				type: "simple",
+				symbol: {
+					type: "polygon-3d",
+					symbolLayers: [
+						{
+							type: "extrude",
+							size: 6,
+							material: {
+								color: "#ccc"
+							}
+						}
+					]
+				}
+			};
+
 			map.layers.add(geojsonLayer2)
 			map.layers.add(geojsonLayer3)
-
+			map.layers.add(tang123)
+			
 			const view = new SceneView({
 				container: "viewDiv",
 				map: map,
