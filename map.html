@@ -83,7 +83,7 @@
 					symbolLayers: [
 						{
 							type: "extrude",
-							size: 0.5,
+							size: 1,
 							material: {
 								color: "#7eadf7"
 							}
@@ -91,17 +91,77 @@
 					]
 				}
 			};
+			const geojsonLayer2 = new GeoJSONLayer({
+				url: "./data2.geojson"
+			});
+			geojsonLayer2.renderer = {
+				type: "simple",
+				symbol: {
+					type: "polygon-3d",
+					symbolLayers: [
+						{
+							type: "extrude",
+							size: 0.05,
+							material: {
+								color: "(255,255,255,0.5)"
+							}
+						}
+					]
+				}
+			};
+
 			const map = new Map({
 				basemap: "topo-vector",
 				ground: "world-elevation",
 				layers: [geojsonLayer] //end layers
 			});
+			const geojsonLayer3 = new GeoJSONLayer({
+				url: "./data3.geojson"
+			});
+			geojsonLayer3.renderer = {
+				type: "simple",
+				symbol: {
+					type: "polygon-3d",
+					symbolLayers: [
+						{
+							type: "extrude",
+							size: 3,
+							material: {
+								color: "#7eadf7"
+							}
+						}
+					]
+				}
+			};
+			const tang123 = new GeoJSONLayer({
+				url: "./tang123.geojson"
+			});
+			tang123.renderer = {
+				type: "simple",
+				symbol: {
+					type: "polygon-3d",
+					symbolLayers: [
+						{
+							type: "extrude",
+							size: 9,
+							material: {
+								color: "#ccc"
+							}
+						}
+					]
+				}
+			};
 
+			map.layers.add(geojsonLayer2)
+			map.layers.add(geojsonLayer3)
+			map.layers.add(tang123)
+			
 			const view = new SceneView({
 				container: "viewDiv",
 				map: map,
 				camera: {
-					position: [106.80322177258323, 10.869402044322747, 300],
+					position: [106.80249, 10.86985,
+300],
 					heading: 0,
 					tilt: 75
 				}

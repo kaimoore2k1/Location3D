@@ -3,28 +3,43 @@
 	"generator": "smartcity",
 	"copyright": "Smartcity",
 	"timestamp": "2021-05-27T09:28:58Z",
-	"features": [{
-		"type": "Feature",
-		"properties": {
-			"Building name": "Landmark Plus",
-			"height": 3,
-			"idb": "7"
-		},
-		"geometry": {
-			"type": "Polygon",
-			"coordinates": [
-
-				[
-					[106.80249, 10.86984, 25],
-					[106.80249, 10.86981, 25],
-					[106.80249, 10.86974, 25],
-					[106.8025, 10.86974, 25],
-					[106.8025, 10.8697, 25],
-					[106.80272, 10.8697, 25],
-					[106.80272, 10.86985, 25]
+	"features": [	
+		{
+			"type": "Feature",
+			"properties": {
+				"Building name": "Thanh nối",
+				"height": 7,
+				"idb": "7"
+			},
+			"geometry": {
+				"type": "Polygon",
+				"coordinates": [
+					[
+						[
+							106.80272,
+							10.869838,
+							39
+						],
+						[
+							106.80272,
+							10.86983,
+							39
+						],
+						[
+							106.80276,
+							10.86983,
+							39
+						],
+						[
+							106.80276,
+							10.869838,
+							39
+						]
+					]
 				]
-			]
-		},
-		"id": "pp7"
-	}]
+			},
+			"id": "pp7"
+		}
+		
+	]
 }
