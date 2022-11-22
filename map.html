@@ -101,9 +101,9 @@
 					symbolLayers: [
 						{
 							type: "extrude",
-							size: 10,
+							size: 0.05,
 							material: {
-								color: "#7eadf7"
+								color: "(255,255,255,0.5)"
 							}
 						}
 					]
@@ -114,7 +114,27 @@
 				ground: "world-elevation",
 				layers: [geojsonLayer] //end layers
 			});
+			const geojsonLayer3 = new GeoJSONLayer({
+				url: "./data3.geojson"
+			});
+			geojsonLayer3.renderer = {
+				type: "simple",
+				symbol: {
+					type: "polygon-3d",
+					symbolLayers: [
+						{
+							type: "extrude",
+							size: 3,
+							material: {
+								color: "#7eadf7"
+							}
+						}
+					]
+				}
+			};
+			
 			map.layers.add(geojsonLayer2)
+			map.layers.add(geojsonLayer3)
 
 			const view = new SceneView({
 				container: "viewDiv",
