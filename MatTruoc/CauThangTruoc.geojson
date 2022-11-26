@@ -1,0 +1,44 @@
+{
+    "type": "FeatureCollection",
+    "generator": "smartcity",
+    "copyright": "Smartcity",
+    "timestamp": "2021-05-27T09:28:58Z",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "Building name": "Tầng 13",
+                "height": 3,
+                "idb": "7"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            106.80270928047004,
+                            10.86985199991516,
+                            27
+                        ],
+                        [
+                            106.80270928047126,
+                            10.869811530442892,
+                            27
+                        ],
+                        [
+                            106.80268180791631,
+                            10.869811530440861,
+                            27
+                        ],
+                        [
+                            106.80268180791133,
+                            10.869851999913125,
+                            27
+                        ]
+                    ]
+                ]
+            },
+            "id": "pp7"
+        }
+    ]
+}
