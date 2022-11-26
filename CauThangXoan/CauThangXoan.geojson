@@ -1,0 +1,28 @@
+{
+    "type": "FeatureCollection",
+    "generator": "smartcity",
+    "copyright": "Smartcity",
+    "timestamp": "2021-05-27T09:28:58Z",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "Building name": "Cửa sổ",
+          "height": 7,
+          "idb": "7"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+                [106.80238, 10.86978],
+                [106.80238, 10.86977, 40],
+                [106.8024, 10.86978]
+            ]
+          ]
+        }
+      }
+    ]
+  }
+  
+
