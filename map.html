@@ -151,6 +151,8 @@
 					]
 				}
 			};
+			
+
 			const tang_13 = new GeoJSONLayer({
 				url: "./Tang_13.geojson"
 			});
@@ -170,10 +172,90 @@
 				}
 			};
 
+			const vienNgangMatTruoc = new GeoJSONLayer({
+				url: "./MatTruoc/vien-ngang-mat-truoc.geojson"
+			});
+			vienNgangMatTruoc.renderer = {
+				type: "simple",
+				symbol: {
+					type: "polygon-3d",
+					symbolLayers: [
+						{
+							type: "extrude",
+							size: 32,
+							material: {
+								color: "#fff"
+							}
+						}
+					]
+				}
+			};
+
+			const cuaSoVienNgang = new GeoJSONLayer({
+				url: "./MatTruoc/cua-so-vien-ngang.geoJson"
+			});
+			cuaSoVienNgang.renderer = {
+				type: "simple",
+				symbol: {
+					type: "polygon-3d",
+					symbolLayers: [
+						{
+							type: "extrude",
+							size: 0.1,
+							material: {
+								color: "#fff"
+							}
+						}
+					]
+				}
+			};
+
+			const cuaSoVienDoc = new GeoJSONLayer({
+				url: "./MatTruoc/cua-so-vien-doc.geojson"
+			});
+			cuaSoVienDoc.renderer = {
+				type: "simple",
+				symbol: {
+					type: "polygon-3d",
+					symbolLayers: [
+						{
+							type: "extrude",
+							size: 1.6,
+							material: {
+								color: "#fff"
+							}
+						}
+					]
+				}
+			};
+
+			const mayCheTang1 = new GeoJSONLayer({
+				url: "./MatTruoc/mai-che-tang-1.geojson"
+			});
+			mayCheTang1.renderer = {
+				type: "simple",
+				symbol: {
+					type: "polygon-3d",
+					symbolLayers: [
+						{
+							type: "extrude",
+							size: 0.2,
+							material: {
+								color: "#fff"
+							}
+						}
+					]
+				}
+			};
+
 			map.layers.add(geojsonLayer2)
 			map.layers.add(geojsonLayer3)
 			map.layers.add(tang123)
 			map.layers.add(tang_13)
+			map.layers.add(cuaSoVienNgang)
+			map.layers.add(cuaSoVienDoc)
+			map.layers.add(vienNgangMatTruoc)
+			map.layers.add(mayCheTang1)
 			
 			const view = new SceneView({
 				container: "viewDiv",
