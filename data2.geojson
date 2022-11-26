@@ -4,52 +4,7 @@
 	"copyright": "Smartcity",
 	"timestamp": "2021-05-27T09:28:58Z",
 	"features": [
-		{
-			"type": "Feature",
-			"properties": {
-				"Building name": "Mái che",
-				"height": 7,
-				"idb": "7"
-			},
-			"geometry": {
-				"type": "Polygon",
-				"coordinates": [
-					[
-						[
-							106.8024835,
-							10.869856,
-							30
-						],
-						[
-							106.8024835,
-							10.86974,
-							30
-						],
-						[
-							106.8024902,
-							10.86974,
-							30
-						],
-						[
-							106.8024902,
-							10.86985,
-							30
-						],
-						[
-							106.80272,
-							10.86985,
-							30
-						],
-						[
-							106.80272,
-							10.869856,
-							30
-						]
-					]
-				]
-			},
-			"id": "pp7"
-		},
+		
 		{
 			"type": "Feature",
 			"properties": {

@@ -91,6 +91,7 @@
 					]
 				}
 			};
+// Mái Che
 			const geojsonLayer2 = new GeoJSONLayer({
 				url: "./data2.geojson"
 			});
@@ -115,6 +116,7 @@
 				ground: "world-elevation",
 				layers: [geojsonLayer] //end layers
 			});
+// Tầng 4-12			
 			const geojsonLayer3 = new GeoJSONLayer({
 				url: "./data3.geojson"
 			});
@@ -133,6 +135,7 @@
 					]
 				}
 			};
+//Tầng 1 2 3
 			const tang123 = new GeoJSONLayer({
 				url: "./tang123.geojson"
 			});
@@ -145,13 +148,32 @@
 							type: "extrude",
 							size: 3,
 							material: {
-								color: "#ccc"
+								color: "#494949"
 							}
 						}
 					]
 				}
 			};
-			
+// Tầng 2_3
+const tang2_3 = new GeoJSONLayer({
+				url: "./tang2_3.geojson"
+			});
+			tang2_3.renderer = {
+				type: "simple",
+				symbol: {
+					type: "polygon-3d",
+					symbolLayers: [
+						{
+							type: "extrude",
+							size: 3,
+							material: {
+								color: "#fff"
+							}
+						}
+					]
+				}
+			};
+//Tầng 13
 
 			const tang_13 = new GeoJSONLayer({
 				url: "./Tang_13.geojson"
@@ -171,6 +193,7 @@
 					]
 				}
 			};
+// Cột tầng 123
 			const Col123 = new GeoJSONLayer({
           		url: "./datacol.geojson",
         	});
@@ -183,14 +206,15 @@
 					type: "extrude",
 					size: 9,
 					material: {
-					color: "red",
+					color: "255,255,255,0.3",
 					},
 				},
 				],
 			},
 			};
+//Nóc nhà 1
 			const matbang = new GeoJSONLayer({
-          		url: "./mat_bang.geojson",
+          		url: "./NocNha2.geojson",
         	});
 			matbang.renderer = {
 			type: "simple",
@@ -199,7 +223,7 @@
 				symbolLayers: [
 				{
 					type: "extrude",
-					size: 2,
+					size: 3,
 					material: {
 					color: "#7eadf7",
 					},
@@ -207,7 +231,7 @@
 				],
 			},
 			};
-
+//
 			const vienNgangMatTruoc = new GeoJSONLayer({
 				url: "./MatTruoc/vien-ngang-mat-truoc.geojson"
 			});
@@ -337,7 +361,138 @@
 					]
 				}
 			};
+// Cầu thang trước
+			const CauThangTruoc = new GeoJSONLayer({
+				url: "./MatTruoc/CauThangTruoc.geojson"
+			});
+			CauThangTruoc.renderer = {
+				type: "simple",
+				symbol: {
+					type: "polygon-3d",
+					symbolLayers: [
+						{
+							type: "extrude",
+							size: 0.5,
+							material: {
+								color: "#7eadf7"
+							}
+						}
+					]
+				}
+			};
+// Cầu thang xoắn
+			const CauThangXoan = new GeoJSONLayer({
+				url: "./CauThangXoan/CauThangXoan.geojson"
+			});
 
+			CauThangXoan.renderer = {
+				type: "simple",
+				symbol: {
+					type: "polygon-3d",
+					symbolLayers: [
+						{
+							type: "extrude",
+							size: 8,
+							material: {
+								color: "#fff"
+							}
+						}
+					]
+				}
+			};
+//Nóc nhà 1
+			const NocNha1 = new GeoJSONLayer({
+				url: "./Nocnha1.geojson"
+			});
+
+			NocNha1.renderer = {
+				type: "simple",
+				symbol: {
+					type: "polygon-3d",
+					symbolLayers: [
+						{
+							type: "extrude",
+							size: 0.5,
+							material: {
+								color: "#fff"
+							}
+						}
+					]
+				}
+			};
+// Giao update
+			const cuaSoVienDocTang1 = new GeoJSONLayer({
+          		url: "./cua-so-tang-1.geojson",
+        	});
+			cuaSoVienDocTang1.renderer = {
+			type: "simple",
+			symbol: {
+				type: "polygon-3d",
+				symbolLayers: [
+				{
+					type: "extrude",
+					size: 1.6,
+					material: {
+					color: "#fff",
+					},
+				},
+				],
+			},
+			};
+			const cuaSoVienNgangTang1 = new GeoJSONLayer({
+          		url: "./cua-so-ngang-tang-1.geojson",
+        	});
+			cuaSoVienNgangTang1.renderer = {
+			type: "simple",
+			symbol: {
+				type: "polygon-3d",
+				symbolLayers: [
+				{
+					type: "extrude",
+					size: 0.1,
+					material: {
+					color: "#fff",
+					},
+				},
+				],
+			},
+			};
+			const cuaSoNgangHong = new GeoJSONLayer({
+          		url: "./cua-so-ngang-hong.geojson",
+        	});
+			cuaSoNgangHong.renderer = {
+			type: "simple",
+			symbol: {
+				type: "polygon-3d",
+				symbolLayers: [
+				{
+					type: "extrude",
+					size: 0.1,
+					material: {
+					color: "#fff",
+					},
+				},
+				],
+			},
+			};
+			const cuaSoNgangHongCao = new GeoJSONLayer({
+          		url: "./cua-so-ngang-hong-cao.geojson",
+        	});
+			cuaSoNgangHongCao.renderer = {
+			type: "simple",
+			symbol: {
+				type: "polygon-3d",
+				symbolLayers: [
+				{
+					type: "extrude",
+					size: 1.1,
+					material: {
+					color: "#fff",
+					},
+				},
+				],
+			},
+			};
 			map.layers.add(geojsonLayer2)
 			map.layers.add(geojsonLayer3)
 			map.layers.add(tang123)
@@ -347,10 +502,19 @@
 			map.layers.add(vienNgangMatTruoc)
 			map.layers.add(mayCheTang1)
 			map.layers.add(Col123)
-		     map.layers.add(matbang)
+		    map.layers.add(matbang)
 			map.layers.add(lineDoc)
 			map.layers.add(lineDocTren)
 			map.layers.add(lineNgang)
+			map.layers.add(CauThangTruoc)
+			map.layers.add(CauThangXoan)
+			map.layers.add(NocNha1)
+			map.layers.add(cuaSoNgangHongCao)
+			map.layers.add(cuaSoNgangHong)
+			map.layers.add(cuaSoVienNgangTang1)
+			map.layers.add(cuaSoVienDocTang1)
+			map.layers.add(tang2_3)
+			
 			const view = new SceneView({
 				container: "viewDiv",
 				map: map,
