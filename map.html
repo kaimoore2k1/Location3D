@@ -338,6 +338,25 @@
 				}
 			};
 
+			const stairs = new GeoJSONLayer({
+				url: "./Stair/stair.geojson"
+			});
+			stairs.renderer = {
+				type: "simple",
+				symbol: {
+					type: "polygon-3d",
+					symbolLayers: [
+						{
+							type: "extrude",
+							size: 0.15,
+							material: {
+								color: "red"
+							}
+						}
+					]
+				}
+			};
+
 			map.layers.add(geojsonLayer2)
 			map.layers.add(geojsonLayer3)
 			map.layers.add(tang123)
@@ -351,6 +370,7 @@
 			map.layers.add(lineDoc)
 			map.layers.add(lineDocTren)
 			map.layers.add(lineNgang)
+			map.layers.add(stairs)
 			const view = new SceneView({
 				container: "viewDiv",
 				map: map,
