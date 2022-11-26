@@ -1,0 +1,30 @@
+{
+    "type": "FeatureCollection",
+    "generator": "smartcity",
+    "copyright": "Smartcity",
+    "timestamp": "2021-05-27T09:28:58Z",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "Building name": "vien doc",
+          "height": 7,
+          "idb": "7"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [106.80249, 10.86985, 36],
+              [106.80248999999999, 10.869850449660802, 36],
+              [106.80248725274332, 10.86993993216058, 36],
+              [106.80248999999999, 10.869939932160593, 36],
+              [106.80249, 10.86985, 36]
+            ]
+          ]
+        },
+        "id": "pp7"
+      }
+    ]
+  }
+  
