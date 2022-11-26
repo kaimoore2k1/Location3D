@@ -245,6 +245,60 @@
 					]
 				}
 			};
+			const lineDoc = new GeoJSONLayer({
+				url: "./linedoc.geojson"
+			});
+			lineDoc.renderer = {
+				type: "simple",
+				symbol: {
+					type: "polygon-3d",
+					symbolLayers: [
+						{
+							type: "extrude",
+							size: 3,
+							material: {
+								color: "#fff"
+							}
+						}
+					]
+				}
+			};
+			const lineDocTren = new GeoJSONLayer({
+				url: "./linedoctren.geojson"
+			});
+			lineDocTren.renderer = {
+				type: "simple",
+				symbol: {
+					type: "polygon-3d",
+					symbolLayers: [
+						{
+							type: "extrude",
+							size: 33,
+							material: {
+								color: "#fff"
+							}
+						}
+					]
+				}
+			};
+			const lineNgang = new GeoJSONLayer({
+				url: "./linengang.geojson"
+			});
+			lineNgang.renderer = {
+				type: "simple",
+				symbol: {
+					type: "polygon-3d",
+					symbolLayers: [
+						{
+							type: "extrude",
+							size: 0.1,
+							material: {
+								color: "#fff"
+							}
+						}
+					]
+				}
+			};
 
 			const cuaSoVienDoc = new GeoJSONLayer({
 				url: "./MatTruoc/cua-so-vien-doc.geojson"
@@ -293,8 +347,10 @@
 			map.layers.add(vienNgangMatTruoc)
 			map.layers.add(mayCheTang1)
 			map.layers.add(Col123)
-			map.layers.add(matbang)
-			
+		     map.layers.add(matbang)
+			map.layers.add(lineDoc)
+			map.layers.add(lineDocTren)
+			map.layers.add(lineNgang)
 			const view = new SceneView({
 				container: "viewDiv",
 				map: map,
