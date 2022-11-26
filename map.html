@@ -143,7 +143,7 @@
 					symbolLayers: [
 						{
 							type: "extrude",
-							size: 9,
+							size: 3,
 							material: {
 								color: "#ccc"
 							}
@@ -170,6 +170,42 @@
 						}
 					]
 				}
+			};
+			const Col123 = new GeoJSONLayer({
+          		url: "./datacol.geojson",
+        	});
+			Col123.renderer = {
+			type: "simple",
+			symbol: {
+				type: "polygon-3d",
+				symbolLayers: [
+				{
+					type: "extrude",
+					size: 9,
+					material: {
+					color: "red",
+					},
+				},
+				],
+			},
+			};
+			const matbang = new GeoJSONLayer({
+          		url: "./mat_bang.geojson",
+        	});
+			matbang.renderer = {
+			type: "simple",
+			symbol: {
+				type: "polygon-3d",
+				symbolLayers: [
+				{
+					type: "extrude",
+					size: 2,
+					material: {
+					color: "#7eadf7",
+					},
+				},
+				],
+			},
 			};
 
 			const vienNgangMatTruoc = new GeoJSONLayer({
@@ -256,6 +292,8 @@
 			map.layers.add(cuaSoVienDoc)
 			map.layers.add(vienNgangMatTruoc)
 			map.layers.add(mayCheTang1)
+			map.layers.add(Col123)
+			map.layers.add(matbang)
 			
 			const view = new SceneView({
 				container: "viewDiv",
