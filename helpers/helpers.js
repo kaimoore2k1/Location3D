@@ -122,3 +122,50 @@ export const getDestinationObject = (data, meters, angle) => {
     });
     return data
 }
+
+export const getDistanceOfTwoPoints = (point1, point2) => {
+    const rad = 6371;
+    let distance = Math.sqrt(Math.pow(point1.x - point2.x, 2) + Math.pow(point1.y - point2.y, 2));
+    distance *= rad;
+    return distance * 1000;
+
+}
+
+export const getMiddlePoint = (point1, point2) => {
+    const middleX = (point1.x + point2.x) / 2;
+    const middleY = (point1.y + point2.y) / 2;
+    const middlePoint = {x: middleX, y: middleY};
+    return middlePoint;
+
+}
+
+const objectRotation = (data, angle) => {
+    data.forEach((item, index) => {
+        let maxDistance = 0;
+        data.forEach((item2, index2) => {
+            let distance = getDistanceOfTwoPoints(item, item2);
+            if ( distance > maxDistance) {
+                maxDistance = distance;
+            }
+        })
+    });
+}
+
+const myFunction = (data) => {
+    const theFirstElement = data[3];
+    const theSecondElement = data[2];
+    const theThird = getDestinationPoint(theSecondElement[0], theSecondElement[1], 14.4729635533, 250);
+    const theThirdElement = [];
+    theThirdElement.push(theThird.lon2);
+    theThirdElement.push(theThird.lat2);
+    const theFourth = getDestinationPoint(theFirstElement[0], theFirstElement[1], 9, 320);
+    const theFourthElement = [];
+    theFourthElement.push(theFourth.lon2);
+    theFourthElement.push(theFourth.lat2);
+    const newData = [];
+    newData.push(theFirstElement);
+    newData.push(theSecondElement);
+    newData.push(theThirdElement);
+    newData.push(theFourthElement);
+    return newData;
+}
