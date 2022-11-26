@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../Location"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Location3D"
+	}
+}

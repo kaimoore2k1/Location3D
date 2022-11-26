@@ -83,7 +83,7 @@
 					symbolLayers: [
 						{
 							type: "extrude",
-							size: 0.5,
+							size: 1,
 							material: {
 								color: "#7eadf7"
 							}
@@ -91,17 +91,216 @@
 					]
 				}
 			};
+			const geojsonLayer2 = new GeoJSONLayer({
+				url: "./data2.geojson"
+			});
+			geojsonLayer2.renderer = {
+				type: "simple",
+				symbol: {
+					type: "polygon-3d",
+					symbolLayers: [
+						{
+							type: "extrude",
+							size: 0.05,
+							material: {
+								color: "(255,255,255,0.5)"
+							}
+						}
+					]
+				}
+			};
+
 			const map = new Map({
 				basemap: "topo-vector",
 				ground: "world-elevation",
 				layers: [geojsonLayer] //end layers
 			});
+			const geojsonLayer3 = new GeoJSONLayer({
+				url: "./data3.geojson"
+			});
+			geojsonLayer3.renderer = {
+				type: "simple",
+				symbol: {
+					type: "polygon-3d",
+					symbolLayers: [
+						{
+							type: "extrude",
+							size: 3,
+							material: {
+								color: "#7eadf7"
+							}
+						}
+					]
+				}
+			};
+			const tang123 = new GeoJSONLayer({
+				url: "./tang123.geojson"
+			});
+			tang123.renderer = {
+				type: "simple",
+				symbol: {
+					type: "polygon-3d",
+					symbolLayers: [
+						{
+							type: "extrude",
+							size: 3,
+							material: {
+								color: "#ccc"
+							}
+						}
+					]
+				}
+			};
+			
 
+			const tang_13 = new GeoJSONLayer({
+				url: "./Tang_13.geojson"
+			});
+			tang_13.renderer = {
+				type: "simple",
+				symbol: {
+					type: "polygon-3d",
+					symbolLayers: [
+						{
+							type: "extrude",
+							size: 5,
+							material: {
+								color: "#7eadf7"
+							}
+						}
+					]
+				}
+			};
+			const Col123 = new GeoJSONLayer({
+          		url: "./datacol.geojson",
+        	});
+			Col123.renderer = {
+			type: "simple",
+			symbol: {
+				type: "polygon-3d",
+				symbolLayers: [
+				{
+					type: "extrude",
+					size: 9,
+					material: {
+					color: "red",
+					},
+				},
+				],
+			},
+			};
+			const matbang = new GeoJSONLayer({
+          		url: "./mat_bang.geojson",
+        	});
+			matbang.renderer = {
+			type: "simple",
+			symbol: {
+				type: "polygon-3d",
+				symbolLayers: [
+				{
+					type: "extrude",
+					size: 2,
+					material: {
+					color: "#7eadf7",
+					},
+				},
+				],
+			},
+			};
+
+			const vienNgangMatTruoc = new GeoJSONLayer({
+				url: "./MatTruoc/vien-ngang-mat-truoc.geojson"
+			});
+			vienNgangMatTruoc.renderer = {
+				type: "simple",
+				symbol: {
+					type: "polygon-3d",
+					symbolLayers: [
+						{
+							type: "extrude",
+							size: 32,
+							material: {
+								color: "#fff"
+							}
+						}
+					]
+				}
+			};
+
+			const cuaSoVienNgang = new GeoJSONLayer({
+				url: "./MatTruoc/cua-so-vien-ngang.geoJson"
+			});
+			cuaSoVienNgang.renderer = {
+				type: "simple",
+				symbol: {
+					type: "polygon-3d",
+					symbolLayers: [
+						{
+							type: "extrude",
+							size: 0.1,
+							material: {
+								color: "#fff"
+							}
+						}
+					]
+				}
+			};
+
+			const cuaSoVienDoc = new GeoJSONLayer({
+				url: "./MatTruoc/cua-so-vien-doc.geojson"
+			});
+			cuaSoVienDoc.renderer = {
+				type: "simple",
+				symbol: {
+					type: "polygon-3d",
+					symbolLayers: [
+						{
+							type: "extrude",
+							size: 1.6,
+							material: {
+								color: "#fff"
+							}
+						}
+					]
+				}
+			};
+
+			const mayCheTang1 = new GeoJSONLayer({
+				url: "./MatTruoc/mai-che-tang-1.geojson"
+			});
+			mayCheTang1.renderer = {
+				type: "simple",
+				symbol: {
+					type: "polygon-3d",
+					symbolLayers: [
+						{
+							type: "extrude",
+							size: 0.2,
+							material: {
+								color: "#fff"
+							}
+						}
+					]
+				}
+			};
+
+			map.layers.add(geojsonLayer2)
+			map.layers.add(geojsonLayer3)
+			map.layers.add(tang123)
+			map.layers.add(tang_13)
+			map.layers.add(cuaSoVienNgang)
+			map.layers.add(cuaSoVienDoc)
+			map.layers.add(vienNgangMatTruoc)
+			map.layers.add(mayCheTang1)
+			map.layers.add(Col123)
+			map.layers.add(matbang)
+			
 			const view = new SceneView({
 				container: "viewDiv",
 				map: map,
 				camera: {
-					position: [106.80322177258323, 10.869402044322747, 300],
+					position: [106.80249, 10.86985,
+300],
 					heading: 0,
 					tilt: 75
 				}
