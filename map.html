@@ -318,7 +318,7 @@ const tang2_3 = new GeoJSONLayer({
 							type: "extrude",
 							size: 3,
 							material: {
-								color: "#fff"
+								color: "#996633"
 							}
 						}
 					]
@@ -354,7 +354,7 @@ const tang2_3 = new GeoJSONLayer({
 							type: "extrude",
 							size: 0.1,
 							material: {
-								color: "#fff"
+								color: "#996633"
 							}
 						}
 					]
@@ -512,6 +512,43 @@ const tang2_3 = new GeoJSONLayer({
 				}
 			};
 // -------------------Cầu thang trước -----------------------------------------------------
+			const vienDocMatHong = new GeoJSONLayer({
+				url: "./MatTruoc/vien-doc-mat-hong.geojson"
+			});
+			vienDocMatHong.renderer = {
+				type: "simple",
+				symbol: {
+					type: "polygon-3d",
+					symbolLayers: [
+						{
+							type: "extrude",
+							size: 32,
+							material: {
+								color: "#fff"
+							}
+						}
+					]
+				}
+			};
+			const vienNgangMatHong = new GeoJSONLayer({
+				url: "./MatTruoc/vien-ngang-mat-hong.geojson"
+			});
+			vienNgangMatHong.renderer = {
+				type: "simple",
+				symbol: {
+					type: "polygon-3d",
+					symbolLayers: [
+						{
+							type: "extrude",
+							size: 0.05,
+							material: {
+								color: "#fff"
+							}
+						}
+					]
+				}
+			};
+// Cầu thang trước
 			const CauThangTruoc = new GeoJSONLayer({
 				url: "./MatTruoc/CauThangTruoc.geojson"
 			});
@@ -717,6 +754,10 @@ const tang2_3 = new GeoJSONLayer({
 			map.layers.add(CauThangTruoc_bacthang)
 
 //-----------------------------------------------------	
+			map.layers.add(vienDocMatHong)
+			map.layers.add(vienNgangMatHong)
+
+			
 			const view = new SceneView({
 				container: "viewDiv",
 				map: map,
