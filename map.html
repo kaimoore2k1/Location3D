@@ -511,19 +511,41 @@ const tang2_3 = new GeoJSONLayer({
 					]
 				}
 			};
-// Cầu thang xoắn
-			const CauThangXoan = new GeoJSONLayer({
-				url: "./CauThangXoan/CauThangXoan.geojson"
+// Cua so mat sau
+			const CuaSo1_Doc = new GeoJSONLayer({
+				url: "./CuaSo_MatSau/CuaSo1_Doc.geojson"
 			});
 
-			CauThangXoan.renderer = {
+			CuaSo1_Doc.renderer = {
 				type: "simple",
 				symbol: {
 					type: "polygon-3d",
 					symbolLayers: [
 						{
 							type: "extrude",
-							size: 8,
+							size: 1.1,
+							material: {
+								color: "#fff"
+							}
+						}
+					]
+				}
+			};
+
+
+			// Cua so mat sau
+			const CuaSo1_Ngang = new GeoJSONLayer({
+				url: "./CuaSo_MatSau/CuaSo1_Ngang.geojson"
+			});
+
+			CuaSo1_Ngang.renderer = {
+				type: "simple",
+				symbol: {
+					type: "polygon-3d",
+					symbolLayers: [
+						{
+							type: "extrude",
+							size: 0.1,
 							material: {
 								color: "#fff"
 							}
@@ -645,7 +667,8 @@ const tang2_3 = new GeoJSONLayer({
 			map.layers.add(vienNgangTang123)
 			map.layers.add(vienDocTang3)
 			map.layers.add(CauThangTruoc)
-			map.layers.add(CauThangXoan)
+			map.layers.add(CuaSo1_Doc)
+			map.layers.add(CuaSo1_Ngang)
 			map.layers.add(NocNha1)
 			map.layers.add(cuaSoNgangHongCao)
 			map.layers.add(cuaSoNgangHong)
