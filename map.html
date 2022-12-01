@@ -890,6 +890,96 @@ const tang2_3 = new GeoJSONLayer({
 					]
 				}
 			};
+			const khoiVuongTraiToaC = new GeoJSONLayer({
+				url: "./Toa_C_Duoi/khoi-vuong-trai.geoJson"
+			});
+			khoiVuongTraiToaC.renderer = {
+				type: "simple",
+				symbol: {
+					type: "polygon-3d",
+					symbolLayers: [
+						{
+							type: "extrude",
+							size: 3,
+							material: {
+								color: "#fff"
+							}
+						}
+					]
+				}
+			};
+			const khoiVuongTrai2ToaC = new GeoJSONLayer({
+				url: "./Toa_C_Duoi/khoi-vuong-trai-2.geoJson"
+			});
+			khoiVuongTrai2ToaC.renderer = {
+				type: "simple",
+				symbol: {
+					type: "polygon-3d",
+					symbolLayers: [
+						{
+							type: "extrude",
+							size: 6,
+							material: {
+								color: "#fff"
+							}
+						}
+					]
+				}
+			};
+			const khoiVuongTraiTrenToaC = new GeoJSONLayer({
+				url: "./Toa_C_Duoi/khoi-vuong-trai-tren.geoJson"
+			});
+			khoiVuongTraiTrenToaC.renderer = {
+				type: "simple",
+				symbol: {
+					type: "polygon-3d",
+					symbolLayers: [
+						{
+							type: "extrude",
+							size: 3,
+							material: {
+								color: "#fff"
+							}
+						}
+					]
+				}
+			};
+			const CNDuoi = new GeoJSONLayer({
+				url: "./Toa_C_Duoi/Chu-nhat-duoi.geoJson"
+			});
+			CNDuoi.renderer = {
+				type: "simple",
+				symbol: {
+					type: "polygon-3d",
+					symbolLayers: [
+						{
+							type: "extrude",
+							size: 9,
+							material: {
+								color: "#fff"
+							}
+						}
+					]
+				}
+			};
+			const CNDuoiPhai = new GeoJSONLayer({
+				url: "./Toa_C_Duoi/chu-nhat-duoi-phai.geoJson"
+			});
+			CNDuoiPhai.renderer = {
+				type: "simple",
+				symbol: {
+					type: "polygon-3d",
+					symbolLayers: [
+						{
+							type: "extrude",
+							size: 9,
+							material: {
+								color: "#fff"
+							}
+						}
+					]
+				}
+			};
 			map.layers.add(geojsonLayer2)
 			map.layers.add(geojsonLayer3)
 			map.layers.add(tang123)
@@ -944,7 +1034,14 @@ const tang2_3 = new GeoJSONLayer({
 			map.layers.add(CN2)
 			map.layers.add(Cot)
 			map.layers.add(maiCam)
+			map.layers.add(khoiVuongTraiToaC)
+			map.layers.add(khoiVuongTrai2ToaC)
+			map.layers.add(khoiVuongTraiTrenToaC)
+			map.layers.add(CNDuoi)
+			map.layers.add(CNDuoiPhai)
 
+			
+			
 			const view = new SceneView({
 				container: "viewDiv",
 				map: map,
