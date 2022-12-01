@@ -511,6 +511,7 @@ const tang2_3 = new GeoJSONLayer({
 					]
 				}
 			};
+			
 // -------------------Cầu thang trước -----------------------------------------------------
 			const vienDocMatHong = new GeoJSONLayer({
 				url: "./MatTruoc/vien-doc-mat-hong.geojson"
@@ -817,6 +818,61 @@ const tang2_3 = new GeoJSONLayer({
 				],
 			},
 			};
+			//Toa C
+			const CN2 = new GeoJSONLayer({
+				url: "./Toa_C_Duoi/Chu-nhat-2.geoJson"
+			});
+			CN2.renderer = {
+				type: "simple",
+				symbol: {
+					type: "polygon-3d",
+					symbolLayers: [
+						{
+							type: "extrude",
+							size: 9,
+							material: {
+								color: "#fff"
+							}
+						}
+					]
+				}
+			};
+			const Cot = new GeoJSONLayer({
+				url: "./Toa_C_Duoi/Cot-dung.geoJson"
+			});
+			Cot.renderer = {
+				type: "simple",
+				symbol: {
+					type: "polygon-3d",
+					symbolLayers: [
+						{
+							type: "extrude",
+							size: 12,
+							material: {
+								color: "#fff"
+							}
+						}
+					]
+				}
+			};
+			const maiCam = new GeoJSONLayer({
+				url: "./Toa_C_Duoi/Mai-cam.geoJson"
+			});
+			maiCam.renderer = {
+				type: "simple",
+				symbol: {
+					type: "polygon-3d",
+					symbolLayers: [
+						{
+							type: "extrude",
+							size: 1.5,
+							material: {
+								color: "orange"
+							}
+						}
+					]
+				}
+			};
 			map.layers.add(geojsonLayer2)
 			map.layers.add(geojsonLayer3)
 			map.layers.add(tang123)
@@ -861,10 +917,15 @@ const tang2_3 = new GeoJSONLayer({
 			map.layers.add(vienDocMatDuoi)
 			map.layers.add(vienNgangMatDuoi)
 
+//-----------------------------------------------------	
 
 			map.layers.add(cuaSoDocNghieng)
 			map.layers.add(cuaSoNgangNghieng)
-			
+			//-----------------------------------------------------	
+			map.layers.add(CN2)
+			map.layers.add(Cot)
+			map.layers.add(maiCam)
+
 			const view = new SceneView({
 				container: "viewDiv",
 				map: map,
