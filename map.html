@@ -980,6 +980,24 @@ const tang2_3 = new GeoJSONLayer({
 					]
 				}
 			};
+			const thanhNgang = new GeoJSONLayer({
+				url: "./Toa_C_Duoi/Thanh-ngang.geoJson"
+			});
+			thanhNgang.renderer = {
+				type: "simple",
+				symbol: {
+					type: "polygon-3d",
+					symbolLayers: [
+						{
+							type: "extrude",
+							size: 0.9,
+							material: {
+								color: "#fff"
+							}
+						}
+					]
+				}
+			};
 			map.layers.add(geojsonLayer2)
 			map.layers.add(geojsonLayer3)
 			map.layers.add(tang123)
@@ -1034,6 +1052,7 @@ const tang2_3 = new GeoJSONLayer({
 			map.layers.add(CN2)
 			map.layers.add(Cot)
 			map.layers.add(maiCam)
+			map.layers.add(thanhNgang)
 			map.layers.add(khoiVuongTraiToaC)
 			map.layers.add(khoiVuongTrai2ToaC)
 			map.layers.add(khoiVuongTraiTrenToaC)
