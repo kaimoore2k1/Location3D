@@ -1,0 +1,47 @@
+{
+    "type": "FeatureCollection",
+    "generator": "smartcity",
+    "copyright": "Smartcity",
+    "timestamp": "2021-05-27T09:28:58Z",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "Building name": "Cot",
+          "height": 7,
+          "idb": "7"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [106.80342, 10.86965, 27],
+              [106.80342, 10.8696, 27],
+              [106.80346, 10.8696, 27],
+              [106.80346, 10.86965, 27],
+              [106.80342, 10.86965, 27]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "Building name": "Cot",
+          "height": 7,
+          "idb": "7"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [106.80373, 10.86953, 27],
+              [106.80366, 10.86953, 27],
+              [106.80366, 10.86948, 27],
+              [106.80373, 10.86948, 27],
+              [106.80373, 10.86953, 27]
+            ]
+          ]
+        }
+      }
+      ]}
