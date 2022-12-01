@@ -998,6 +998,42 @@ const tang2_3 = new GeoJSONLayer({
 					]
 				}
 			};
+			const cotThangGiua = new GeoJSONLayer({
+				url: "./Toa_C_Duoi/cot-thang-giua.geoJson"
+			});
+			cotThangGiua.renderer = {
+				type: "simple",
+				symbol: {
+					type: "polygon-3d",
+					symbolLayers: [
+						{
+							type: "extrude",
+							size: 0.9,
+							material: {
+								color: "#fff"
+							}
+						}
+					]
+				}
+			};
+			const cotThangGiuaPhai = new GeoJSONLayer({
+				url: "./Toa_C_Duoi/cot-thang-giua-phai.geoJson"
+			});
+			cotThangGiuaPhai.renderer = {
+				type: "simple",
+				symbol: {
+					type: "polygon-3d",
+					symbolLayers: [
+						{
+							type: "extrude",
+							size: 0.9,
+							material: {
+								color: "#fff"
+							}
+						}
+					]
+				}
+			};
 			map.layers.add(geojsonLayer2)
 			map.layers.add(geojsonLayer3)
 			map.layers.add(tang123)
@@ -1058,7 +1094,8 @@ const tang2_3 = new GeoJSONLayer({
 			map.layers.add(khoiVuongTraiTrenToaC)
 			map.layers.add(CNDuoi)
 			map.layers.add(CNDuoiPhai)
-
+			map.layers.add(cotThangGiua)
+			map.layers.add(cotThangGiuaPhai)
 			
 			
 			const view = new SceneView({
