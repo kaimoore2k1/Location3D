@@ -1020,7 +1020,7 @@
 				}
 			};
 			const CNDuoi = new GeoJSONLayer({
-				url: "./Toa_C_Duoi/Chu-nhat-duoi.geoJson"
+				url: "./Toa_C_Duoi/chu-nhat-duoi.geoJson"
 			});
 			CNDuoi.renderer = {
 				type: "simple",
@@ -1032,6 +1032,60 @@
 							size: 9,
 							material: {
 								color: "#fff"
+							}
+						}
+					]
+				}
+			};
+			const MaiCNDuoi = new GeoJSONLayer({
+				url: "./Toa_C_Duoi/mai-chu-nhat-duoi.geoJson"
+			});
+			MaiCNDuoi.renderer = {
+				type: "simple",
+				symbol: {
+					type: "polygon-3d",
+					symbolLayers: [
+						{
+							type: "extrude",
+							size: 0.1,
+							material: {
+								color: "#73F4ED"
+							}
+						}
+					]
+				}
+			};
+			const MaiCNPhaiDuoi = new GeoJSONLayer({
+				url: "./Toa_C_Duoi/mai-chu-nhat-duoi-phai.geoJson"
+			});
+			MaiCNPhaiDuoi.renderer = {
+				type: "simple",
+				symbol: {
+					type: "polygon-3d",
+					symbolLayers: [
+						{
+							type: "extrude",
+							size: 0.1,
+							material: {
+								color: "#73F4ED"
+							}
+						}
+					]
+				}
+			};
+			const MaiKVCNDuoi = new GeoJSONLayer({
+				url: "./Toa_C_Duoi/mai-khoi-vuong-trai-tren.geoJson"
+			});
+			MaiKVCNDuoi.renderer = {
+				type: "simple",
+				symbol: {
+					type: "polygon-3d",
+					symbolLayers: [
+						{
+							type: "extrude",
+							size: 0.1,
+							material: {
+								color: "orange"
 							}
 						}
 					]
@@ -1211,7 +1265,7 @@
 				symbolLayers: [
 				{
 					type: "extrude",
-					size: 2,
+					size: 0.1,
 					material: {
 					color: "#fff",
 					},
@@ -1219,6 +1273,8 @@
 				],
 			},
 			};
+			
+			map.layers.add(MaiKVCNDuoi)
 
 			map.layers.add(cuaSoNgangTrai)
 			map.layers.add(cuaSoNgangTraiCao)
@@ -1292,7 +1348,8 @@
 			map.layers.add(cuaT)
 			map.layers.add(cotCuaT)
 			map.layers.add(cotThanhNgang)
-
+			map.layers.add(MaiCNDuoi)
+			map.layers.add(MaiCNPhaiDuoi)
 			
 			
 			const view = new SceneView({
