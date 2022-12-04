@@ -511,6 +511,7 @@ const tang2_3 = new GeoJSONLayer({
 					]
 				}
 			};
+			
 // -------------------Cầu thang trước -----------------------------------------------------
 			const vienDocMatHong = new GeoJSONLayer({
 				url: "./MatTruoc/vien-doc-mat-hong.geojson"
@@ -871,7 +872,259 @@ const tang2_3 = new GeoJSONLayer({
 					},
 				},
 				],
-			},
+			}}
+			//Toa C
+			const CN2 = new GeoJSONLayer({
+				url: "./Toa_C_Duoi/Chu-nhat-2.geoJson"
+			});
+			CN2.renderer = {
+				type: "simple",
+				symbol: {
+					type: "polygon-3d",
+					symbolLayers: [
+						{
+							type: "extrude",
+							size: 9,
+							material: {
+								color: "#fff"
+							}
+						}
+					]
+				}
+			};
+			const Cot = new GeoJSONLayer({
+				url: "./Toa_C_Duoi/Cot-dung.geoJson"
+			});
+			Cot.renderer = {
+				type: "simple",
+				symbol: {
+					type: "polygon-3d",
+					symbolLayers: [
+						{
+							type: "extrude",
+							size: 12,
+							material: {
+								color: "#fff"
+							}
+						}
+					]
+				}
+			};
+			const maiCam = new GeoJSONLayer({
+				url: "./Toa_C_Duoi/Mai-cam.geoJson"
+			});
+			maiCam.renderer = {
+				type: "simple",
+				symbol: {
+					type: "polygon-3d",
+					symbolLayers: [
+						{
+							type: "extrude",
+							size: 1.5,
+							material: {
+								color: "orange"
+							}
+						}
+					]
+				}
+			};
+			const khoiVuongTraiToaC = new GeoJSONLayer({
+				url: "./Toa_C_Duoi/khoi-vuong-trai.geoJson"
+			});
+			khoiVuongTraiToaC.renderer = {
+				type: "simple",
+				symbol: {
+					type: "polygon-3d",
+					symbolLayers: [
+						{
+							type: "extrude",
+							size: 3,
+							material: {
+								color: "#fff"
+							}
+						}
+					]
+				}
+			};
+			const khoiVuongTrai2ToaC = new GeoJSONLayer({
+				url: "./Toa_C_Duoi/khoi-vuong-trai-2.geoJson"
+			});
+			khoiVuongTrai2ToaC.renderer = {
+				type: "simple",
+				symbol: {
+					type: "polygon-3d",
+					symbolLayers: [
+						{
+							type: "extrude",
+							size: 6,
+							material: {
+								color: "#fff"
+							}
+						}
+					]
+				}
+			};
+			const khoiVuongTraiTrenToaC = new GeoJSONLayer({
+				url: "./Toa_C_Duoi/khoi-vuong-trai-tren.geoJson"
+			});
+			khoiVuongTraiTrenToaC.renderer = {
+				type: "simple",
+				symbol: {
+					type: "polygon-3d",
+					symbolLayers: [
+						{
+							type: "extrude",
+							size: 3,
+							material: {
+								color: "#fff"
+							}
+						}
+					]
+				}
+			};
+			const CNDuoi = new GeoJSONLayer({
+				url: "./Toa_C_Duoi/Chu-nhat-duoi.geoJson"
+			});
+			CNDuoi.renderer = {
+				type: "simple",
+				symbol: {
+					type: "polygon-3d",
+					symbolLayers: [
+						{
+							type: "extrude",
+							size: 9,
+							material: {
+								color: "#fff"
+							}
+						}
+					]
+				}
+			};
+			const CNDuoiPhai = new GeoJSONLayer({
+				url: "./Toa_C_Duoi/chu-nhat-duoi-phai.geoJson"
+			});
+			CNDuoiPhai.renderer = {
+				type: "simple",
+				symbol: {
+					type: "polygon-3d",
+					symbolLayers: [
+						{
+							type: "extrude",
+							size: 9,
+							material: {
+								color: "#fff"
+							}
+						}
+					]
+				}
+			};
+			const thanhNgang = new GeoJSONLayer({
+				url: "./Toa_C_Duoi/Thanh-ngang.geoJson"
+			});
+			thanhNgang.renderer = {
+				type: "simple",
+				symbol: {
+					type: "polygon-3d",
+					symbolLayers: [
+						{
+							type: "extrude",
+							size: 0.9,
+							material: {
+								color: "#fff"
+							}
+						}
+					]
+				}
+			};
+			const cotThangGiua = new GeoJSONLayer({
+				url: "./Toa_C_Duoi/cot-thang-giua.geoJson"
+			});
+			cotThangGiua.renderer = {
+				type: "simple",
+				symbol: {
+					type: "polygon-3d",
+					symbolLayers: [
+						{
+							type: "extrude",
+							size: 0.9,
+							material: {
+								color: "#fff"
+							}
+						}
+					]
+				}
+			};
+			const cotThangGiuaPhai = new GeoJSONLayer({
+				url: "./Toa_C_Duoi/cot-thang-giua-phai.geoJson"
+			});
+			cotThangGiuaPhai.renderer = {
+				type: "simple",
+				symbol: {
+					type: "polygon-3d",
+					symbolLayers: [
+						{
+							type: "extrude",
+							size: 0.9,
+							material: {
+								color: "#fff"
+							}
+						}
+					]
+				}
+			};
+			const cuaT = new GeoJSONLayer({
+				url: "./Toa_C_Duoi/cua.geoJson"
+			});
+			cuaT.renderer = {
+				type: "simple",
+				symbol: {
+					type: "polygon-3d",
+					symbolLayers: [
+						{
+							type: "extrude",
+							size: 0.5,
+							material: {
+								color: "#fff"
+							}
+						}
+					]
+				}
+			};
+			const cotCuaT = new GeoJSONLayer({
+				url: "./Toa_C_Duoi/cot-cua.geoJson"
+			});
+			cotCuaT.renderer = {
+				type: "simple",
+				symbol: {
+					type: "polygon-3d",
+					symbolLayers: [
+						{
+							type: "extrude",
+							size: 1.5,
+							material: {
+								color: "#fff"
+							}
+						}
+					]
+				}
+			};
+			const cotThanhNgang = new GeoJSONLayer({
+				url: "./Toa_C_Duoi/cot-thanh-ngang.geoJson"
+			});
+			cotThanhNgang.renderer = {
+				type: "simple",
+				symbol: {
+					type: "polygon-3d",
+					symbolLayers: [
+						{
+							type: "extrude",
+							size: 9,
+							material: {
+								color: "#fff"
+							}
+						}
+					]
+				}
 			};
 			map.layers.add(geojsonLayer2)
 			map.layers.add(geojsonLayer3)
@@ -919,10 +1172,29 @@ const tang2_3 = new GeoJSONLayer({
 			map.layers.add(vienDocMatDuoi)
 			map.layers.add(vienNgangMatDuoi)
 
+//-----------------------------------------------------	
 
 			map.layers.add(cuaSoDocNghieng)
 			map.layers.add(cuaSoNgangNghieng)
 			map.layers.add(cotThanhNoi)
+			
+			//-----------------------------------------------------	
+			map.layers.add(CN2)
+			map.layers.add(Cot)
+			map.layers.add(maiCam)
+			map.layers.add(thanhNgang)
+			map.layers.add(khoiVuongTraiToaC)
+			map.layers.add(khoiVuongTrai2ToaC)
+			map.layers.add(khoiVuongTraiTrenToaC)
+			map.layers.add(CNDuoi)
+			map.layers.add(CNDuoiPhai)
+			map.layers.add(cotThangGiua)
+			map.layers.add(cotThangGiuaPhai)
+			map.layers.add(cuaT)
+			map.layers.add(cotCuaT)
+			map.layers.add(cotThanhNgang)
+
+			
 			
 			const view = new SceneView({
 				container: "viewDiv",

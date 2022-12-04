@@ -1,0 +1,26 @@
+{
+    "type": "FeatureCollection",
+    "generator": "smartcity",
+    "copyright": "Smartcity",
+    "timestamp": "2021-05-27T09:28:58Z",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "Building name": "Mai Cam",
+          "height": 7,
+          "idb": "7"
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [106.80278, 10.86956, 27],
+              [106.80262, 10.86956, 27],
+              [106.80262,10.86944, 27],
+              [ 106.80278, 10.86944, 27],
+              [106.80278, 10.86956, 27]
+            ]
+          ]
+        }
+      }]}
