@@ -818,6 +818,7 @@ const tang2_3 = new GeoJSONLayer({
 				],
 			},
 			};
+<<<<<<< HEAD
 //-----------------------------------------------------------
 			const CuaSoDon_Doc = new GeoJSONLayer({
 				url: "./CuaSo_MatSau/CuaSoDon_Doc.geojson",
@@ -856,6 +857,32 @@ const tang2_3 = new GeoJSONLayer({
 				],
 			},
 			};
+
+			const loiVaoMatTruoc = new GeoJSONLayer({
+          		url: "/MatTruoc/cong-vao-mat-truoc.geojson",
+        	})
+=======
+
+			const loiVaoMatTruoc = new GeoJSONLayer({
+          		url: "/MatTruoc/cong-vao-mat-truoc.geojson",
+        	});
+>>>>>>> 09b911b6f62eee77f5f1a8766ba71c209cd69103
+			loiVaoMatTruoc.renderer = {
+			type: "simple",
+			symbol: {
+				type: "polygon-3d",
+				symbolLayers: [
+				{
+					type: "extrude",
+					size: 0.1,
+					material: {
+					color: "#fff",
+					},
+				},
+				],
+			},
+			};
+<<<<<<< HEAD
 			const cotThanhNoi = new GeoJSONLayer({
           		url: "./cot-thanh-noi.geojson",
         	});
@@ -872,6 +899,26 @@ const tang2_3 = new GeoJSONLayer({
 					},
 				},
 				],
+			}};
+=======
+>>>>>>> 09b911b6f62eee77f5f1a8766ba71c209cd69103
+			const loiVaoDocMatTruoc = new GeoJSONLayer({
+          		url: "/MatTruoc/cong-vao-doc-mat-truoc.geojson",
+        	});
+			loiVaoDocMatTruoc.renderer = {
+			type: "simple",
+			symbol: {
+				type: "polygon-3d",
+				symbolLayers: [
+				{
+					type: "extrude",
+					size: 2,
+					material: {
+					color: "#fff",
+					},
+				},
+				],
+<<<<<<< HEAD
 			}}
 			//Toa C
 			const CN2 = new GeoJSONLayer({
@@ -1126,6 +1173,72 @@ const tang2_3 = new GeoJSONLayer({
 					]
 				}
 			};
+			});
+=======
+			},
+			};
+>>>>>>> 09b911b6f62eee77f5f1a8766ba71c209cd69103
+			const nenToaA = new GeoJSONLayer({
+          		url: "/ToaA/nen-toa-A.geojson",
+        	});
+			nenToaA.renderer = {
+			type: "simple",
+			symbol: {
+				type: "polygon-3d",
+				symbolLayers: [
+				{
+					type: "extrude",
+					size: 2,
+					material: {
+					color: "#fff",
+					},
+				},
+				],
+			},
+			};
+
+			const cuaSoNgangTrai = new GeoJSONLayer({
+          		url: "/MatTruoc/cua-so-ngang-trai.geojson",
+        	});
+			cuaSoNgangTrai.renderer = {
+			type: "simple",
+			symbol: {
+				type: "polygon-3d",
+				symbolLayers: [
+				{
+					type: "extrude",
+					size: 2,
+					material: {
+					color: "#fff",
+					},
+				},
+				],
+			},
+			};
+
+			const cuaSoNgangTraiCao = new GeoJSONLayer({
+          		url: "/MatTruoc/cua-so-ngang-trai-cao.geojson",
+        	});
+			cuaSoNgangTraiCao.renderer = {
+			type: "simple",
+			symbol: {
+				type: "polygon-3d",
+				symbolLayers: [
+				{
+					type: "extrude",
+					size: 2,
+					material: {
+					color: "#fff",
+					},
+				},
+				],
+			},
+			};
+			map.layers.add(cuaSoNgangTrai)
+			map.layers.add(cuaSoNgangTraiCao)
+			map.layers.add(nenToaA)
+			map.layers.add(loiVaoDocMatTruoc)
+			map.layers.add(loiVaoMatTruoc)
 			map.layers.add(geojsonLayer2)
 			map.layers.add(geojsonLayer3)
 			map.layers.add(tang123)
@@ -1208,8 +1321,7 @@ const tang2_3 = new GeoJSONLayer({
 			});
 
 			view.popup.defaultPopupTemplateEnabled = true;
-		});
-
+		
 	</script>
 </head>
 
