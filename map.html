@@ -120,6 +120,7 @@
 			const geojsonLayer3 = new GeoJSONLayer({
 				url: "./data3.geojson"
 			});
+
 			geojsonLayer3.renderer = {
 				type: "simple",
 				symbol: {
@@ -155,7 +156,7 @@
 				}
 			};
 // Tầng 2_3
-const tang2_3 = new GeoJSONLayer({
+			const tang2_3 = new GeoJSONLayer({
 				url: "./tang2_3.geojson"
 			});
 			tang2_3.renderer = {
@@ -213,9 +214,9 @@ const tang2_3 = new GeoJSONLayer({
 			},
 			};
 			const Col123color = new GeoJSONLayer({
-          url: "./datacol2.geojson",
-        });
-        Col123color.renderer = {
+          		url: "./datacol2.geojson",
+        	});
+        	Col123color.renderer = {
           type: "simple",
           
           symbol: {
@@ -818,7 +819,6 @@ const tang2_3 = new GeoJSONLayer({
 				],
 			},
 			};
-<<<<<<< HEAD
 //-----------------------------------------------------------
 			const CuaSoDon_Doc = new GeoJSONLayer({
 				url: "./CuaSo_MatSau/CuaSoDon_Doc.geojson",
@@ -861,12 +861,6 @@ const tang2_3 = new GeoJSONLayer({
 			const loiVaoMatTruoc = new GeoJSONLayer({
           		url: "/MatTruoc/cong-vao-mat-truoc.geojson",
         	})
-=======
-
-			const loiVaoMatTruoc = new GeoJSONLayer({
-          		url: "/MatTruoc/cong-vao-mat-truoc.geojson",
-        	});
->>>>>>> 09b911b6f62eee77f5f1a8766ba71c209cd69103
 			loiVaoMatTruoc.renderer = {
 			type: "simple",
 			symbol: {
@@ -882,7 +876,6 @@ const tang2_3 = new GeoJSONLayer({
 				],
 			},
 			};
-<<<<<<< HEAD
 			const cotThanhNoi = new GeoJSONLayer({
           		url: "./cot-thanh-noi.geojson",
         	});
@@ -900,8 +893,6 @@ const tang2_3 = new GeoJSONLayer({
 				},
 				],
 			}};
-=======
->>>>>>> 09b911b6f62eee77f5f1a8766ba71c209cd69103
 			const loiVaoDocMatTruoc = new GeoJSONLayer({
           		url: "/MatTruoc/cong-vao-doc-mat-truoc.geojson",
         	});
@@ -918,7 +909,6 @@ const tang2_3 = new GeoJSONLayer({
 					},
 				},
 				],
-<<<<<<< HEAD
 			}}
 			//Toa C
 			const CN2 = new GeoJSONLayer({
@@ -1173,14 +1163,9 @@ const tang2_3 = new GeoJSONLayer({
 					]
 				}
 			};
-			});
-=======
-			},
-			};
->>>>>>> 09b911b6f62eee77f5f1a8766ba71c209cd69103
 			const nenToaA = new GeoJSONLayer({
-          		url: "/ToaA/nen-toa-A.geojson",
-        	});
+				url: "/ToaA/nen-toa-A.geojson"
+			});
 			nenToaA.renderer = {
 			type: "simple",
 			symbol: {
@@ -1234,6 +1219,7 @@ const tang2_3 = new GeoJSONLayer({
 				],
 			},
 			};
+
 			map.layers.add(cuaSoNgangTrai)
 			map.layers.add(cuaSoNgangTraiCao)
 			map.layers.add(nenToaA)
@@ -1313,15 +1299,14 @@ const tang2_3 = new GeoJSONLayer({
 				container: "viewDiv",
 				map: map,
 				camera: {
-					position: [106.80249, 10.86985,
-300],
+					position: [106.80249, 10.86985,300],
 					heading: 0,
 					tilt: 75
 				}
 			});
 
 			view.popup.defaultPopupTemplateEnabled = true;
-		
+			})
 	</script>
 </head>
 
