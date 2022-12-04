@@ -809,7 +809,45 @@ const tang2_3 = new GeoJSONLayer({
 				symbolLayers: [
 				{
 					type: "extrude",
-					size: 0.05,
+					size: 0.1,
+					material: {
+					color: "#fff",
+					},
+				},
+				],
+			},
+			};
+//-----------------------------------------------------------
+			const CuaSoDon_Doc = new GeoJSONLayer({
+				url: "./CuaSo_MatSau/CuaSoDon_Doc.geojson",
+        	});
+			CuaSoDon_Doc.renderer = {
+			type: "simple",
+			symbol: {
+				type: "polygon-3d",
+				symbolLayers: [
+				{
+					type: "extrude",
+					size: 1.1,
+					material: {
+					color: "#fff",
+					},
+				},
+				],
+			},
+			};
+
+			const CuaSoDon_Ngang = new GeoJSONLayer({
+				url: "./CuaSo_MatSau/CuaSoDon_Ngang.geojson",
+        	});
+			CuaSoDon_Ngang.renderer = {
+			type: "simple",
+			symbol: {
+				type: "polygon-3d",
+				symbolLayers: [
+				{
+					type: "extrude",
+					size: 0.1,
 					material: {
 					color: "#fff",
 					},
@@ -861,6 +899,8 @@ const tang2_3 = new GeoJSONLayer({
 			map.layers.add(CauThangTruoc)
 			map.layers.add(CuaSo1_Doc)
 			map.layers.add(CuaSo1_Ngang)
+			map.layers.add(CuaSoDon_Doc)
+			map.layers.add(CuaSoDon_Ngang)
 //-----------------------------------------------------
 			map.layers.add(CauThangTruoc_2)
 			map.layers.add(CauThangXoan)
