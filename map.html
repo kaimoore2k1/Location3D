@@ -1192,7 +1192,7 @@
 				symbolLayers: [
 				{
 					type: "extrude",
-					size: 2,
+					size: 0.1,
 					material: {
 					color: "#fff",
 					},
@@ -1211,7 +1211,7 @@
 				symbolLayers: [
 				{
 					type: "extrude",
-					size: 2,
+					size: 1.1,
 					material: {
 					color: "#fff",
 					},
@@ -1220,6 +1220,26 @@
 			},
 			};
 
+			const phanMauBenTrai = new GeoJSONLayer({
+          		url: "/phan-mau-ben-trai.geojson",
+        	});
+			phanMauBenTrai.renderer = {
+			type: "simple",
+			symbol: {
+				type: "polygon-3d",
+				symbolLayers: [
+				{
+					type: "extrude",
+					size: 35,
+					material: {
+					color: "#fff",
+					},
+				},
+				],
+			},
+			};
+
+			map.layers.add(phanMauBenTrai)
 			map.layers.add(cuaSoNgangTrai)
 			map.layers.add(cuaSoNgangTraiCao)
 			map.layers.add(nenToaA)
