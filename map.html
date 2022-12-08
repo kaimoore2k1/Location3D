@@ -1246,7 +1246,7 @@
 				symbolLayers: [
 				{
 					type: "extrude",
-					size: 2,
+					size: 0.1,
 					material: {
 					color: "#fff",
 					},
@@ -1265,7 +1265,11 @@
 				symbolLayers: [
 				{
 					type: "extrude",
+<<<<<<< dang2
+					size: 1.1,
+=======
 					size: 0.1,
+>>>>>>> master
 					material: {
 					color: "#fff",
 					},
@@ -1339,6 +1343,63 @@
 			map.layers.add(MaiKVCNDuoi)
 >>>>>>> master
 
+			const phanMauBenTrai = new GeoJSONLayer({
+          		url: "/phan-mau-ben-trai.geojson",
+        	});
+			phanMauBenTrai.renderer = {
+			type: "simple",
+			symbol: {
+				type: "polygon-3d",
+				symbolLayers: [
+				{
+					type: "extrude",
+					size: 35,
+					material: {
+					color: "#fff",
+					},
+				},
+				],
+			},
+			};
+			const toaA = new GeoJSONLayer({
+          		url: "./ToaA/nen-toa-A.geojson",
+        	});
+			toaA.renderer = {
+			type: "simple",
+			symbol: {
+				type: "polygon-3d",
+				symbolLayers: [
+				{
+					type: "extrude",
+					size: 1,
+					material: {
+					color: "#fff",
+					},
+				},
+				],
+			},
+			};
+			const tuongToaA = new GeoJSONLayer({
+          		url: "./ToaA/wall-toa-A.geojson",
+        	});
+			tuongToaA.renderer = {
+			type: "simple",
+			symbol: {
+				type: "polygon-3d",
+				symbolLayers: [
+				{
+					type: "extrude",
+					size: 4,
+					material: {
+					color: "#fff",
+					},
+				},
+				],
+			},
+			};
+			map.layers.add(toaA)
+			map.layers.add(tuongToaA)
+			map.layers.add(phanMauBenTrai)
 			map.layers.add(cuaSoNgangTrai)
 			map.layers.add(cuaSoNgangTraiCao)
 			map.layers.add(nenToaA)
