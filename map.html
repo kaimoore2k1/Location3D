@@ -873,7 +873,7 @@ const tang2_3 = new GeoJSONLayer({
 				},
 				],
 			}}
-			//Toa C
+//-------Toa C
 			const CN2 = new GeoJSONLayer({
 				url: "./Toa_C_Duoi/Chu-nhat-2.geoJson"
 			});
@@ -922,7 +922,7 @@ const tang2_3 = new GeoJSONLayer({
 							type: "extrude",
 							size: 1.5,
 							material: {
-								color: "orange"
+								color: "#FFE9A4"
 							}
 						}
 					]
@@ -1126,6 +1126,140 @@ const tang2_3 = new GeoJSONLayer({
 					]
 				}
 			};
+//----------------------Tòa B--------------------------------------
+const B1 = new GeoJSONLayer({
+				url: "./Toa_B/B1.geoJson"
+			});
+			B1.renderer = {
+				type: "simple",
+				symbol: {
+					type: "polygon-3d",
+					symbolLayers: [
+						{
+							type: "extrude",
+							size: 30,
+							material: {
+								color: "#A1E0FF"
+							}
+						}
+					]
+				}
+			};
+
+			const Bfloor = new GeoJSONLayer({
+				url: "./Toa_B/B_floor.geoJson"
+			});
+			Bfloor.renderer = {
+				type: "simple",
+				symbol: {
+					type: "polygon-3d",
+					symbolLayers: [
+						{
+							type: "extrude",
+							size: 0.4,
+							material: {
+								color: "#A1E0FF"
+							}
+						}
+					]
+				}
+			};
+
+			const B2 = new GeoJSONLayer({
+				url: "./Toa_B/B2.geoJson"
+			});
+			B2.renderer = {
+				type: "simple",
+				symbol: {
+					type: "polygon-3d",
+					symbolLayers: [
+						{
+							type: "extrude",
+							size: 27,
+							material: {
+								color: "#A1E0FF"
+							}
+						}
+					]
+				}
+			};
+			const B3 = new GeoJSONLayer({
+				url: "./Toa_B/B3.geoJson"
+			});
+			B3.renderer = {
+				type: "simple",
+				symbol: {
+					type: "polygon-3d",
+					symbolLayers: [
+						{
+							type: "extrude",
+							size: 24,
+							material: {
+								color: "#A1E0FF"
+							}
+						}
+					]
+				}
+			};
+
+			const B4 = new GeoJSONLayer({
+				url: "./Toa_B/B4.geoJson"
+			});
+			B4.renderer = {
+				type: "simple",
+				symbol: {
+					type: "polygon-3d",
+					symbolLayers: [
+						{
+							type: "extrude",
+							size: 21,
+							material: {
+								color: "#A1E0FF"
+							}
+						}
+					]
+				}
+			};
+
+			const B5 = new GeoJSONLayer({
+				url: "./Toa_B/B5.geoJson"
+			});
+			B5.renderer = {
+				type: "simple",
+				symbol: {
+					type: "polygon-3d",
+					symbolLayers: [
+						{
+							type: "extrude",
+							size: 18,
+							material: {
+								color: "#A1E0FF"
+							}
+						}
+					]
+				}
+			};
+			const B6B = new GeoJSONLayer({
+				url: "./Toa_B/B6B.geoJson"
+			});
+			B6B.renderer = {
+				type: "simple",
+				symbol: {
+					type: "polygon-3d",
+					symbolLayers: [
+						{
+							type: "extrude",
+							size: 15,
+							material: {
+								color: "#A1E0FF"
+							}
+						}
+					]
+				}
+			};
+
+			
+
 			map.layers.add(geojsonLayer2)
 			map.layers.add(geojsonLayer3)
 			map.layers.add(tang123)
@@ -1193,6 +1327,16 @@ const tang2_3 = new GeoJSONLayer({
 			map.layers.add(cuaT)
 			map.layers.add(cotCuaT)
 			map.layers.add(cotThanhNgang)
+//----------------------Tòa B-------------------------------	
+			map.layers.add(B1)
+			map.layers.add(Bfloor)
+			map.layers.add(B2)
+			map.layers.add(B3)
+			map.layers.add(B4)
+			map.layers.add(B5)
+			map.layers.add(B6B)
+
+		
 
 			
 			
