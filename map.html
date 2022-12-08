@@ -1273,8 +1273,71 @@
 				],
 			},
 			};
+<<<<<<< HuuTinh_ToaB
+//--------------------------------------- Cau Thang Bac toa B
+			const CauThangThemB = new GeoJSONLayer({
+          		url: "/Toa B - HT/CauThangTronB.geojson",
+        	});
+			CauThangThemB.renderer = {
+			type: "simple",
+			symbol: {
+				type: "polygon-3d",
+				symbolLayers: [
+				{
+					type: "extrude",
+					size: 2.1,
+					material: {
+					color: "#00FF00",
+					},
+				},
+				],
+			},
+			};
+
+			const BonHoaDocB = new GeoJSONLayer({
+          		url: "/Toa B - HT/BonHoaB.geojson",
+        	});
+			BonHoaDocB.renderer = {
+			type: "simple",
+			symbol: {
+				type: "polygon-3d",
+				symbolLayers: [
+				{
+					type: "extrude",
+					size: 2.5,
+					material: {
+					color: "#FF8C00",
+					},
+				},
+				],
+			},
+			};
+
+			const BonHoaNgangB = new GeoJSONLayer({
+          		url: "/Toa B - HT/BonHoaB_Ngang.geojson",
+        	});
+			BonHoaNgangB.renderer = {
+			type: "simple",
+			symbol: {
+				type: "polygon-3d",
+				symbolLayers: [
+				{
+					type: "extrude",
+					size: 2.5,
+					material: {
+					color: "#FF8C00",
+					},
+				},
+				],
+			},
+			};
+
+
+
+=======
 			
 			map.layers.add(MaiKVCNDuoi)
+>>>>>>> master
 
 			map.layers.add(cuaSoNgangTrai)
 			map.layers.add(cuaSoNgangTraiCao)
@@ -1348,8 +1411,17 @@
 			map.layers.add(cuaT)
 			map.layers.add(cotCuaT)
 			map.layers.add(cotThanhNgang)
+<<<<<<< HuuTinh_ToaB
+			map.layers.add(CauThangThemB)
+			map.layers.add(BonHoaDocB)
+			map.layers.add(BonHoaNgangB)
+			
+
+
+=======
 			map.layers.add(MaiCNDuoi)
 			map.layers.add(MaiCNPhaiDuoi)
+>>>>>>> master
 			
 			
 			const view = new SceneView({
