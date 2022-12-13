@@ -1236,6 +1236,25 @@
 			},
 			};
 
+			const vongTronNhoToaA = new GeoJSONLayer({
+				url: "/ToaA/vong-tron-nho-toa-a.geojson"
+			});
+			vongTronNhoToaA.renderer = {
+			type: "simple",
+			symbol: {
+				type: "polygon-3d",
+				symbolLayers: [
+				{
+					type: "extrude",
+					size: 0.5,
+					material: {
+					color: "#000",
+					},
+				},
+				],
+			},
+			};
+
 			const cuaSoNgangTrai = new GeoJSONLayer({
           		url: "/MatTruoc/cua-so-ngang-trai.geojson",
         	});
@@ -1265,7 +1284,7 @@
 				symbolLayers: [
 				{
 					type: "extrude",
-					size: 0.1,
+					size: 1.1,
 					material: {
 					color: "#fff",
 					},
@@ -1396,6 +1415,7 @@
 			map.layers.add(cuaSoNgangTrai)
 			map.layers.add(cuaSoNgangTraiCao)
 			map.layers.add(nenToaA)
+			map.layers.add(vongTronNhoToaA)
 			map.layers.add(loiVaoDocMatTruoc)
 			map.layers.add(loiVaoMatTruoc)
 //----------------------Tòa B--------------------------------------
