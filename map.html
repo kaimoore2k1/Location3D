@@ -118,7 +118,7 @@
 			});
 // Tầng 4-12			
 			const geojsonLayer3 = new GeoJSONLayer({
-				url: "./data3.geojson"
+				url: "./data33.geojson"
 			});
 
 			geojsonLayer3.renderer = {
@@ -129,6 +129,44 @@
 						{
 							type: "extrude",
 							size: 3,
+							material: {
+								color: "#73F4ED"
+							}
+						}
+					]
+				}
+			};
+			const MainE_phai = new GeoJSONLayer({
+				url: "./MainE/E_phai.geojson"
+			});
+
+			MainE_phai.renderer = {
+				type: "simple",
+				symbol: {
+					type: "polygon-3d",
+					symbolLayers: [
+						{
+							type: "extrude",
+							size: 27,
+							material: {
+								color: "#73F4ED"
+							}
+						}
+					]
+				}
+			};
+			const MainE_trai = new GeoJSONLayer({
+				url: "./MainE/E_trai.geojson"
+			});
+
+			MainE_trai.renderer = {
+				type: "simple",
+				symbol: {
+					type: "polygon-3d",
+					symbolLayers: [
+						{
+							type: "extrude",
+							size: 30,
 							material: {
 								color: "#73F4ED"
 							}
@@ -174,12 +212,48 @@
 					]
 				}
 			};
-//Tầng 13
-
-			const tang_13 = new GeoJSONLayer({
-				url: "./Tang_13.geojson"
+			const Goc_tang3 = new GeoJSONLayer({
+				url: "./MainE/Goc_tang3.geojson"
 			});
-			tang_13.renderer = {
+			Goc_tang3.renderer = {
+				type: "simple",
+				symbol: {
+					type: "polygon-3d",
+					symbolLayers: [
+						{
+							type: "extrude",
+							size: 3,
+							material: {
+								color: "#BFBFBF"
+							}
+						}
+					]
+				}
+			};
+//Tầng 13 E
+
+			const tang_13trai = new GeoJSONLayer({
+				url: "./MainE/Tang_13trai.geojson"
+			});
+			tang_13trai.renderer = {
+				type: "simple",
+				symbol: {
+					type: "polygon-3d",
+					symbolLayers: [
+						{
+							type: "extrude",
+							size: 6.07,
+							material: {
+								color: "#73F4ED"
+							}
+						}
+					]
+				}
+			};
+			const tang_13phai = new GeoJSONLayer({
+				url: "./MainE/Tang_13phai.geojson"
+			});
+			tang_13phai.renderer = {
 				type: "simple",
 				symbol: {
 					type: "polygon-3d",
@@ -194,6 +268,25 @@
 					]
 				}
 			};
+			const Roof_phai = new GeoJSONLayer({
+				url: "./MainE/Roof_phai.geojson"
+			});
+			Roof_phai.renderer = {
+				type: "simple",
+				symbol: {
+					type: "polygon-3d",
+					symbolLayers: [
+						{
+							type: "extrude",
+							size: 1,
+							material: {
+								color: "#73F4ED"
+							}
+						}
+					]
+				}
+			};
+
 // Cột tầng 123
 			const Col123 = new GeoJSONLayer({
           		url: "./datacol.geojson",
@@ -1286,7 +1379,7 @@
 					type: "extrude",
 					size: 2.1,
 					material: {
-					color: "#00FF00",
+					color: "#white",
 					},
 				},
 				],
@@ -1305,7 +1398,7 @@
 					type: "extrude",
 					size: 2.5,
 					material: {
-					color: "#FF8C00",
+					color: "#242323",
 					},
 				},
 				],
@@ -1324,7 +1417,7 @@
 					type: "extrude",
 					size: 2.5,
 					material: {
-					color: "#FF8C00",
+					color: "#242323",
 					},
 				},
 				],
@@ -1411,7 +1504,7 @@ const B1 = new GeoJSONLayer({
 							type: "extrude",
 							size: 30,
 							material: {
-								color: "#A1E0FF"
+								color: "#92E4FF"
 							}
 						}
 					]
@@ -1430,7 +1523,7 @@ const B1 = new GeoJSONLayer({
 							type: "extrude",
 							size: 0.4,
 							material: {
-								color: "#A1E0FF"
+								color: "#92E4FF"
 							}
 						}
 					]
@@ -1449,7 +1542,7 @@ const B1 = new GeoJSONLayer({
 							type: "extrude",
 							size: 27,
 							material: {
-								color: "#A1E0FF"
+								color: "#92E4FF"
 							}
 						}
 					]
@@ -1467,7 +1560,7 @@ const B1 = new GeoJSONLayer({
 							type: "extrude",
 							size: 24,
 							material: {
-								color: "#A1E0FF"
+								color: "#92E4FF"
 							}
 						}
 					]
@@ -1486,7 +1579,7 @@ const B1 = new GeoJSONLayer({
 							type: "extrude",
 							size: 21,
 							material: {
-								color: "#A1E0FF"
+								color: "#92E4FF"
 							}
 						}
 					]
@@ -1505,7 +1598,7 @@ const B1 = new GeoJSONLayer({
 							type: "extrude",
 							size: 18,
 							material: {
-								color: "#A1E0FF"
+								color: "#92E4FF"
 							}
 						}
 					]
@@ -1523,19 +1616,41 @@ const B1 = new GeoJSONLayer({
 							type: "extrude",
 							size: 15,
 							material: {
-								color: "#A1E0FF"
+								color: "#92E4FF"
 							}
 						}
 					]
 				}
 			};
-
+//------------- Tòa B Bậc Thang-------------------------
+const B_stair = new GeoJSONLayer({
+				url: "./Toa_B/B_stair.geoJson"
+			});
+			B_stair.renderer = {
+				type: "simple",
+				symbol: {
+					type: "polygon-3d",
+					symbolLayers: [
+						{
+							type: "extrude",
+							size: 2.8,
+							material: {
+								color: "#242323"
+							}
+						}
+					]
+				}
+			};
 			
-
+			map.layers.add(MainE_phai)
+			map.layers.add(MainE_trai)
+			map.layers.add(tang_13trai)
+			map.layers.add(tang_13phai)
+			map.layers.add(Roof_phai)
+			map.layers.add(Goc_tang3)
 			map.layers.add(geojsonLayer2)
 			map.layers.add(geojsonLayer3)
 			map.layers.add(tang123)
-			map.layers.add(tang_13)
 			map.layers.add(cuaSoVienNgang)
 			map.layers.add(cuaSoVienDoc)
 //-----------------------------------------------------
@@ -1607,6 +1722,7 @@ const B1 = new GeoJSONLayer({
 			map.layers.add(B4)
 			map.layers.add(B5)
 			map.layers.add(B6B)
+			map.layers.add(B_stair)
 
 		
 
