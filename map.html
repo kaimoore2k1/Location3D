@@ -1530,6 +1530,27 @@ const B1 = new GeoJSONLayer({
 				}
 			};
 
+//------------------------ Bo sung toa E
+const CotCauThang = new GeoJSONLayer({
+				url: "./CuaSo_MatSau/CotCauThang.geojson"
+			});
+			CotCauThang.renderer = {
+				type: "simple",
+				symbol: {
+					type: "polygon-3d",
+					symbolLayers: [
+						{
+							type: "extrude",
+							size: 41,
+							material: {
+								color: "#A1E0FF"
+							}
+						}
+					]
+				}
+			};
+
+
 			
 
 			map.layers.add(geojsonLayer2)
@@ -1615,6 +1636,7 @@ const B1 = new GeoJSONLayer({
 			map.layers.add(BonHoaNgangB)
 			map.layers.add(MaiCNDuoi)
 			map.layers.add(MaiCNPhaiDuoi)
+			map.layers.add(CotCauThang)
 			
 			
 			const view = new SceneView({
