@@ -1409,6 +1409,25 @@
 				],
 			},
 			};
+			const circleA = new GeoJSONLayer({
+          		url: "./ToaA/circle.geojson",
+        	});
+			circleA.renderer = {
+			type: "simple",
+			symbol: {
+				type: "polygon-3d",
+				symbolLayers: [
+				{
+					type: "extrude",
+					size: 5,
+					material: {
+					color: "red",
+					},
+				},
+				],
+			},
+			};
+			map.layers.add(circleA)
 			map.layers.add(toaA)
 			map.layers.add(tuongToaA)
 			map.layers.add(phanMauBenTrai)
